@@ -1,0 +1,13 @@
+---
+
+const {title} = Astro.props;
+
+---
+
+
+
+<article class=`${Astro.props.class} relative rounded-lg backdrop-blur-md border-[3px] border-blue-dianne-400`>
+    <slot name="bg-img"/>
+    <h2 class="m-4 font-bold text-balance text-2xl">{title}</h2>
+    <slot name="content"/>
+</article>

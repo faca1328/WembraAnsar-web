@@ -1,0 +1,55 @@
+---
+import Item from "./item.astro";
+---
+
+<section
+    class={`w-full max-w-[80rem] h-[40rem] grid grid-cols-8 auto-rows-auto mx-auto p-10 grid-rows-7 gap-5 mt-20 `}
+>
+    <Item 
+        title="Visita nuestra Tienda!" 
+        class="col-span-4 row-span-7 hover:scale-[1.02] transition-all duration-500 hover:shadow-cream-50 hover:shadow-lg">
+        <div
+            slot="bg-img"
+            class="background transition-scale absolute bottom-0 left-0 top-0 -z-10 h-full w-full bg-cover bg-center bg-no-repeat bg-blend-luminosity cursor-pointer"
+            style="background-image: url(../../public/tienda.jpg), linear-gradient(0deg, rgba(252, 252, 252, 0) 60%, rgba(191,226,225, 0.9) 90%);"
+        >
+        </div>
+
+        <p slot="content" class="m-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+            possimus error voluptatem expedita quisquam saepe tempora sequi
+            harum laudantium nulla blanditiis, illum tempore, explicabo
+            provident facere at tenetur, rem officiis!
+        </p>
+    </Item>
+
+    <Item
+        title="Ante cualquier duda, Contactanos!"
+        class="col-span-4 row-span-2 col-start-5 row-start-6 hover:scale-[1.02] transition-all duration-500 hover:shadow-cream-50 hover:shadow-lg text-daintree-950"
+    >
+        <div
+            slot="bg-img"
+            class="background transition-scale absolute bottom-0 left-0 top-0 -z-10 h-full w-full bg-cover bg-top bg-no-repeat cursor-pointer"
+            style="background-image: url(../../public/Contact-Us.png), linear-gradient(0deg, rgba(252, 252, 252, 0) 60%, rgb(191, 226, 225) 90%);"
+        >
+        </div>
+    </Item>
+
+    <Item
+        title="Aprende sobre el cuidado de tus plantas favoritas con nuestras Guias!"
+        class="col-span-4 row-span-5 col-start-5 row-start-1 hover:scale-[1.02] transition-all duration-500 hover:shadow-cream-50 hover:shadow-lg text-daintree-950"
+    >
+        <div
+            slot="bg-img"
+            class="background transition-scale absolute bottom-0 left-0 top-0 -z-10 h-full w-full bg-cover bg-center bg-no-repeat bg-blend-luminosity cursor-pointer"
+            style="background-image: url(../../public/blog.jpg), linear-gradient(0deg, rgba(252, 252, 252, 0) 60%, rgba(191,226,225, 0.9) 90%);"
+        >
+        </div>
+        <p slot="content" class="m-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+            possimus error voluptatem expedita quisquam saepe tempora sequi
+            harum laudantium nulla blanditiis, illum tempore, explicabo
+            provident facere at tenetur, rem officiis!
+        </p>
+    </Item>
+</section>

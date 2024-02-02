@@ -1,4 +1,6 @@
 ---
+// Supports weights 100-900
+import '@fontsource-variable/onest';
 
 ---
 
@@ -6,15 +8,15 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content="Bienvenidos a Wembra-Ansar, un lugar que te invita a regalar Vida! Aqui podras comprar y aprender sobre tus plantas favoritas." />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Wembra-Ansar</title>
+		<title>Wenbra-Ansar</title>
 	</head>
 	<body>
 		<slot />
 	</body>
+	<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
 </html>
 
 <style is:global>
@@ -29,4 +31,11 @@
 			Courier New,
 			monospace;
 	}
+	html{
+		background-color: #001e26;
+		color: #fefde8;
+		font-weight: 500;
+		font-family: 'Onest Variable', sans-serif;
+	}
+
 </style>

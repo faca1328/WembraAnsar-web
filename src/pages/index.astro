@@ -1,11 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
+import Header from '../components/header.astro'
+import Footer from '../components/footer.astro';
+import Introduction from '../components/introduction.astro';
+import FyQ from '../components/fyq.astro';
+import Bento from '../components/bento.astro';
 ---
 
 <Layout>
+	<Header/>
 	<main>
+		<Introduction/> <!-- Vamos a mostrar que estamos en plaza serrano -->
 
+		<Bento/> <!-- Vamos a mostrar que pueden ver la tienda, el blog con informacion y el contact us -->
+
+		<FyQ/> <!-- Como va a funcionar el sistema para comprar plantas -->
+		
+		<Footer/>
 	</main>	
 </Layout>
 
