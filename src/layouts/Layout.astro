@@ -1,7 +1,9 @@
 ---
 // Supports weights 100-900
 import '@fontsource-variable/onest';
-
+import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
+import { ViewTransitions } from 'astro:transitions';
 ---
 
 <!doctype html>
@@ -12,9 +14,12 @@ import '@fontsource-variable/onest';
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<title>Wenbra-Ansar</title>
+		<ViewTransitions/>
 	</head>
 	<body>
+		<Header/>
 		<slot />
+		<Footer/>
 	</body>
 	<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
 </html>
@@ -30,12 +35,14 @@ import '@fontsource-variable/onest';
 			Bitstream Vera Sans Mono,
 			Courier New,
 			monospace;
+			
 	}
 	html{
 		background-color: #001e26;
 		color: #fefde8;
 		font-weight: 500;
 		font-family: 'Onest Variable', sans-serif;
+		scroll-behavior: smooth;
 	}
 
 </style>

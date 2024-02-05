@@ -1,0 +1,107 @@
+---
+import Input from "./input.astro";
+---
+
+<div
+    class="flex flex-col w-screen m-auto py-24 px-10 gap-10 text-cream-100 bg-gradient-to-b from-blue-dianne-800/50 to-transparent to-15%"
+>
+    <div class="flex justify-between items-center">
+        <h2 class="text-2xl">Escribinos tus dudas!</h2>
+        <button
+            class="mr-10 bg-gradient-to-br from-blue-dianne-400/50 to-blue-dianne-800/50 p-3 rounded-3xl transition-all duration-300 hover:shadow-cream-50 hover:shadow-sm"
+        >
+            Enviar
+        </button>
+    </div>
+    <hr class="opacity-20 -mt-5" />
+
+    <div class="flex gap-10 w-full justify-between">
+        <div class="flex flex-col gap-y-10">
+            <Input for="nombre" placeHolder="Nombre y Apellido" />
+
+            <Input for="email" placeHolder="Email" />
+        </div>
+        <div
+            class="form__group field bg-gradient-to-t from-blue-dianne-400/50 to-transparent rounded-t-xl min-w-[30rem]"
+        >
+            <textarea
+                name="textarea"
+                rows="5"
+                placeholder="Escribinos!"
+                class="form__field resize-none"></textarea>
+            <label for="textarea" class="form__label">Escribinos!</label>
+        </div>
+    </div>
+</div>
+
+<style>
+    textarea:focus{
+        border-color: rgba(255, 145, 0, 0);
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0)inset, 0 0 8px rgba(255,144,0,0);
+    outline: 0 none;
+    }
+
+    .form__group {
+        position: relative;
+        padding: 20px 0 0;
+        width: 100%;
+        max-width: 180px;
+    }
+
+    .form__field {
+        font-family: inherit;
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid #9b9b9b;
+        outline: 0;
+        font-size: 17px;
+        color: #fff;
+        padding: 7px 0;
+        background: transparent;
+        transition: border-color 0.2s;
+    }
+
+    .form__field::placeholder {
+        color: transparent;
+    }
+
+    .form__field:placeholder-shown ~ .form__label {
+        font-size: 17px;
+        cursor: text;
+        top: 20px;
+    }
+
+    .form__label {
+        position: absolute;
+        top: 0;
+        display: block;
+        transition: 0.2s;
+        font-size: 17px;
+        color: #9b9b9b;
+        pointer-events: none;
+    }
+
+    .form__field:focus {
+        padding-bottom: 6px;
+        font-weight: 700;
+        border-width: 2px;
+        border-image: linear-gradient(to right, #315359, #439497);
+        border-image-slice: 1;
+    }
+
+    .form__field:focus ~ .form__label {
+        position: absolute;
+        top: 0;
+        display: block;
+        transition: 0.2s;
+        font-size: 17px;
+        color: #bfe2e1;
+        font-weight: 500;
+    }
+
+    /* reset input */
+    .form__field:required,
+    .form__field:invalid {
+        box-shadow:;
+    }
+</style>
