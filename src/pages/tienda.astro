@@ -1,13 +1,11 @@
 ---
+import Productos from "../components/Productos";
 import Layout from "../layouts/Layout.astro";
-
-
 ---
 
-
 <Layout>
-    <div class="h-screen bg-cream-950">
-        hi
+    <div class="bg-[blur-lg] text-center items-center w-full my-10">
+        Bienvenidos a la tienda !
     </div>
-
+    <Productos client:load />
 </Layout>

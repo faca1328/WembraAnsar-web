@@ -3,7 +3,7 @@ import Input from "./input.astro";
 ---
 
 <div
-    class="flex flex-col w-screen m-auto py-24 px-10 gap-10 text-cream-100 bg-gradient-to-b from-blue-dianne-800/50 to-transparent to-15%"
+    class="flex flex-col px-10 m-auto py-24 gap-10 text-cream-100 bg-gradient-to-b from-blue-dianne-800/50 to-transparent to-15%"
 >
     <div class="flex justify-between items-center">
         <h2 class="text-2xl">Escribinos tus dudas!</h2>
@@ -22,11 +22,11 @@ import Input from "./input.astro";
             <Input for="email" placeHolder="Email" />
         </div>
         <div
-            class="form__group field bg-gradient-to-t from-blue-dianne-400/50 to-transparent rounded-t-xl min-w-[30rem]"
+            class="form__group field bg-gradient-to-t from-blue-dianne-400/50 to-transparent rounded-t-xl w-full max-w-[30rem]"
         >
             <textarea
                 name="textarea"
-                rows="5"
+                rows="3"
                 placeholder="Escribinos!"
                 class="form__field resize-none"></textarea>
             <label for="textarea" class="form__label">Escribinos!</label>
@@ -43,9 +43,6 @@ import Input from "./input.astro";
 
     .form__group {
         position: relative;
-        padding: 20px 0 0;
-        width: 100%;
-        max-width: 180px;
     }
 
     .form__field {
@@ -56,7 +53,7 @@ import Input from "./input.astro";
         outline: 0;
         font-size: 17px;
         color: #fff;
-        padding: 7px 0;
+        padding: 40px 0;
         background: transparent;
         transition: border-color 0.2s;
     }

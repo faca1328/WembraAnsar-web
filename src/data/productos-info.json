@@ -1,0 +1,50 @@
+[
+    {
+        "categoria": "Plantas",
+        "productos": [
+            {
+                "nombre": "Fitonia",
+                "descripcion": "Descripcion de una fitonia ...",
+                "cuidado": "Dificil",
+                "imagen": "https://verdecora.es/blog/wp-content/uploads/2018/01/cuidados-fitonia-planta-interior-1.jpg.webp",
+                "precio": 300,
+                "id":1
+            },
+            {
+                "nombre": "Cactus",
+                "descripcion": "Descripcion de un cactus ...",
+                "cuidado": "Facil",
+                "imagen": "https://t1.uc.ltmcdn.com/es/posts/7/1/1/tipos_de_cactus_de_interior_51117_600_square.jpg",
+                "precio": 80,
+                "id":2
+            },
+            {
+                "nombre": "Palo de Agua",
+                "descripcion": "Descripcion de un palo de agua ...",
+                "cuidado": "Medio",
+                "imagen": "https://madreelefante.com/wp-content/uploads/2022/07/9D15E774-6F97-463A-9AB6-9CE02DA566F3.jpeg",
+                "precio": 1000,
+                "id":3
+            }
+        ]
+    },
+    {
+        "categoria": "Insumos Varios",
+        "productos": [
+            {
+                "nombre": "Tierra",
+                "descripcion": "Descripcion esto es tierra ...",
+                "imagen": "https://acdn.mitiendanube.com/stores/913/526/products/711-cf8208230b0d7d493c15490344743017-640-0.png",
+                "precio": 25.50,
+                "id":4
+            },
+            {
+                "nombre": "Maceta Grande",
+                "descripcion": "Descripcion, esto es una maceta grande ...",
+                "imagen": "https://acdn.mitiendanube.com/stores/913/526/products/diseno-sin-titulo-2019-06-10t105638-2751-c07b19fe9f18d6909715609503232479-640-0.png",
+                "precio": 50,
+                "id":5
+            }
+        ]
+    }
+]
