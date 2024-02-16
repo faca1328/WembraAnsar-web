@@ -1,18 +1,30 @@
 import productosInfo from "@/data/productos-info.json";
 
-//sirve como filtro a la info que estoy trayendo arriba. Esa se podria enviar directamente perod e esta amnera evito cargar toda la info junta si no es necesario.
 import type { APIRoute } from "astro";
 
+export const GET: APIRoute = ({ request }) => {
+    const { url } = request;
+    const searchParams = new URL(url).searchParams;
 
-export const GET: APIRoute = ({request}) => {
-    const {url} = request;
+    const categoria = searchParams.get('category') ?? 0;
+    const precio = searchParams.get('precio') ?? 'Todos';
+    const cuidado = searchParams.get('cuidado') ?? 'Todos';
 
-    //el search params es lo que hay despues del '?' que pongo en la URL
-    const searchParams = new URL(url).searchParams
-    const categoria = searchParams.get('category') ?? 0
+    let productosFiltrados = productosInfo[categoria as number].productos;
 
-    //filtro por categoria para pasarlo en el Response
-    const infoCategoria = productosInfo[categoria as number]
+    if (precio && precio !== 'Todos') { // Filtrar por precio
+        const [min, max] = precio.split('-').map(Number);
+        productosFiltrados = productosFiltrados.filter(producto =>
+            producto.precio >= min && producto.precio <= max
+        );
+    }
 
-    return new Response(JSON.stringify(infoCategoria))
+    // Si la categoría es "Plantas"
+    if (categoria === '0' && cuidado !== 'Todos') { // Filtrar por nivel de cuidado
+        productosFiltrados = productosFiltrados.filter(producto =>
+            producto.cuidado === cuidado
+        );
+    }
+
+    return new Response(JSON.stringify(productosFiltrados));
 }
