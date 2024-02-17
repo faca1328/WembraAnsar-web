@@ -2,6 +2,11 @@
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
+		extend: {
+			screens: {
+			  'phone': '450px',
+			},
+		  },
 		colors: {
 			'cream': {
 				'50': '#fefde8',

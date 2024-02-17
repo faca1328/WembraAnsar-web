@@ -1,10 +1,12 @@
 <footer class="bg-blue-dianne-50 flex justify-center items-center relative">
     <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div
-            class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 justify-between px-5 m-auto"
+            class="grid grid-cols-1 gap-8 sm:gap-6 sm:grid-cols-3 justify-between sm:px-5 m-auto"
         >
-            <div>
-                <h2 class="mb-6 text-sm font-extrabold text-blue-dianne-950 uppercase">
+            <div class="sm:block hidden">
+                <h2
+                    class="mb-6 text-sm font-extrabold text-blue-dianne-950 uppercase"
+                >
                     Resources
                 </h2>
                 <ul class="text-blue-dianne-950/80 font-medium">
@@ -21,14 +23,15 @@
                     </li>
                 </ul>
             </div>
-            <div class="mb-6 flex flex-col justify-center items-center">
-                <img
-                    src="/logo.png"
-                    class="h-32 m-auto bg-white rounded-full px-3 -top-16 absolute"
-                    alt="Logo"
-                />
-
-                <div class="flex mt-10">
+            <div class="sm:mb-6 mb-1 flex flex-col justify-center items-center">
+                <a href="/" class="items-center justify-center w-full flex">
+                    <img
+                        src="/logo.png"
+                        class="h-32 m-auto bg-white rounded-full px-3 -top-16 absolute"
+                        alt="Logo"
+                    />
+                </a>
+                <div class="flex mt-10 w-[80%] justify-between phone:px-10">
                     <a
                         href="#"
                         class="text-blue-dianne-950/80 hover:text-blue-dianne-950 dark:hover:text-white"
@@ -98,8 +101,10 @@
                     </a>
                 </div>
             </div>
-            <div class="text-end">
-                <h2 class="mb-6 text-sm font-extrabold text-blue-dianne-950 uppercase">
+            <div class="text-end sm:block hidden">
+                <h2
+                    class="mb-6 text-sm font-extrabold text-blue-dianne-950 uppercase"
+                >
                     Legal
                 </h2>
                 <ul class="text-blue-dianne-950/80 font-medium">

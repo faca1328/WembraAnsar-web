@@ -1,12 +1,21 @@
 <header class="flex text-cream-100 w-screen justify-center">
-    <ul class="flex gap-10 items-center">
+    <ul class="phone:flex phone:gap-10 items-center grid grid-cols-3 grid-rows-2 w-[90%] my-2 justify-center">
+        <li class="phone:hidden block row-span-2">
+            <a href="/">
+                <img
+                    src="/logo.png"
+                    alt="logo"
+                    class="max-h-16 -p-8 bg-blue-dianne-50 px-2 rounded-full my-2 min-h-10"
+                />
+            </a>
+        </li>
         <li>
             <a href="/tienda">Tienda</a>
         </li>
         <li>
             <a href="/blog">Aprende</a>
         </li>
-        <li>
+        <li class="hidden phone:block">
             <a href="/">
                 <img
                     src="/logo.png"

@@ -3,11 +3,11 @@ import Item from "./item.astro";
 ---
 
 <section
-    class={`w-full max-w-[80rem] h-[40rem] grid grid-cols-8 auto-rows-auto mx-auto p-10 grid-rows-7 gap-5 mt-20 `}
+    class="w-full max-w-[80rem] h-[40rem] grid phone:grid-cols-8 phone:grid-rows-7 grid-cols-1 grid-rows-3 auto-rows-auto mx-auto p-10 gap-5 phone:mt-20 mt-10 "
 >
     <Item 
         title="Visita nuestra Tienda!" 
-        class="col-span-4 row-span-7 hover:scale-[1.02] transition-all duration-500 hover:shadow-cream-50 hover:shadow-lg">
+        class="phone:col-span-4 phone:row-span-7 hover:scale-[1.02] transition-all duration-500 hover:shadow-cream-50 hover:shadow-lg">
         <div
             slot="bg-img"
             class="background transition-scale absolute bottom-0 left-0 top-0 -z-10 h-full w-full bg-cover bg-center bg-no-repeat bg-blend-luminosity"
@@ -15,7 +15,7 @@ import Item from "./item.astro";
         >
         </div>
 
-        <p slot="content" class="m-4">
+        <p slot="content" class="m-4 phone:block hidden">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
             possimus error voluptatem expedita quisquam saepe tempora sequi
             harum laudantium nulla blanditiis, illum tempore, explicabo
@@ -25,7 +25,7 @@ import Item from "./item.astro";
 
     <Item
         title=""
-        class="col-span-4 row-span-2 col-start-5 row-start-6 hover:scale-[1.02] transition-all duration-500 hover:shadow-cream-50 hover:shadow-lg text-daintree-950"
+        class="phone:col-span-4 phone:row-span-2 phone:col-start-5 phone:row-start-6 hover:scale-[1.02] transition-all duration-500 hover:shadow-cream-50 hover:shadow-lg text-daintree-950"
     >
         <div
             slot="bg-img"
@@ -37,7 +37,7 @@ import Item from "./item.astro";
 
     <Item
         title="Aprende sobre el cuidado de tus plantas favoritas con nuestras Guias!"
-        class="col-span-4 row-span-5 col-start-5 row-start-1 hover:scale-[1.02] transition-all duration-500 hover:shadow-cream-50 hover:shadow-lg text-daintree-950"
+        class="phone:col-span-4 phone:row-span-5 phone:col-start-5 phone:row-start-1 hover:scale-[1.02] transition-all duration-500 hover:shadow-cream-50 hover:shadow-lg text-daintree-950"
     >
         <div
             slot="bg-img"
@@ -45,7 +45,7 @@ import Item from "./item.astro";
             style="background-image: url(/blog.jpg), linear-gradient(0deg, rgba(252, 252, 252, 0) 60%, rgba(191,226,225, 0.9) 90%);"
         >
         </div>
-        <p slot="content" class="m-4">
+        <p slot="content" class="m-4 phone:block hidden">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
             possimus error voluptatem expedita quisquam saepe tempora sequi
             harum laudantium nulla blanditiis, illum tempore, explicabo
