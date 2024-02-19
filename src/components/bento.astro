@@ -3,17 +3,19 @@ import Item from "./item.astro";
 ---
 
 <section
-    class="w-full max-w-[80rem] h-[40rem] grid phone:grid-cols-8 phone:grid-rows-7 grid-cols-1 grid-rows-3 auto-rows-auto mx-auto p-10 gap-5 phone:mt-20 mt-10 "
+    class="w-full max-w-[80rem] h-[40rem] grid phone:grid-cols-8 phone:grid-rows-7 grid-cols-1 grid-rows-3 auto-rows-auto mx-auto p-10 gap-5 phone:mt-20 mt-10"
 >
-    <Item 
-        title="Visita nuestra Tienda!" 
-        class="phone:col-span-4 phone:row-span-7 hover:scale-[1.02] transition-all duration-500 hover:shadow-cream-50 hover:shadow-lg">
-        <div
+    <Item
+        title="Visita nuestra Tienda!"
+        class="phone:col-span-4 phone:row-span-7 hover:scale-[1.02] transition-all duration-500 hover:shadow-cream-50 hover:shadow-lg"
+    >
+        <a
+            href="/tienda"
             slot="bg-img"
             class="background transition-scale absolute bottom-0 left-0 top-0 -z-10 h-full w-full bg-cover bg-center bg-no-repeat bg-blend-luminosity"
             style="background-image: url(/tienda.jpg), linear-gradient(0deg, rgba(252, 252, 252, 0) 60%, rgba(191,226,225, 0.9) 90%);"
         >
-        </div>
+        </a>
 
         <p slot="content" class="m-4 phone:block hidden">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
@@ -27,24 +29,26 @@ import Item from "./item.astro";
         title=""
         class="phone:col-span-4 phone:row-span-2 phone:col-start-5 phone:row-start-6 hover:scale-[1.02] transition-all duration-500 hover:shadow-cream-50 hover:shadow-lg text-daintree-950"
     >
-        <div
+        <a
+            href="/contactus"
             slot="bg-img"
             class="background transition-scale absolute bottom-0 left-0 top-0 -z-10 h-full w-full bg-cover bg-top bg-no-repeat"
             style="background-image: url(/Contact-Us.png), linear-gradient(0deg, rgba(252, 252, 252, 0) 60%, rgb(191, 226, 225) 90%);"
         >
-        </div>
+        </a>
     </Item>
 
     <Item
         title="Aprende sobre el cuidado de tus plantas favoritas con nuestras Guias!"
         class="phone:col-span-4 phone:row-span-5 phone:col-start-5 phone:row-start-1 hover:scale-[1.02] transition-all duration-500 hover:shadow-cream-50 hover:shadow-lg text-daintree-950"
     >
-        <div
+        <a
+            href="/blog"
             slot="bg-img"
             class="background transition-scale absolute bottom-0 left-0 top-0 -z-10 h-full w-full bg-cover bg-center bg-no-repeat bg-blend-luminosity"
             style="background-image: url(/blog.jpg), linear-gradient(0deg, rgba(252, 252, 252, 0) 60%, rgba(191,226,225, 0.9) 90%);"
         >
-        </div>
+        </a>
         <p slot="content" class="m-4 phone:block hidden">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
             possimus error voluptatem expedita quisquam saepe tempora sequi

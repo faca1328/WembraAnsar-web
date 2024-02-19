@@ -35,7 +35,7 @@ export default function Productos() {
 
     return (
         <>
-            <select id="underline_select" class="block p-3 mt-5 w-full text-[1.68rem] leading-10 text-pretty text-cream-100/80 bg-transparent border-0 border-b-2 border-cream-100/80 appearance-none focus:outline-none focus:ring-0 focus:border-cream-100/80 cursor-pointer"
+            <select class="block p-3 mt-5 w-full text-[1.68rem] leading-10 text-pretty text-cream-100/80 bg-transparent border-0 border-b-2 border-cream-100/80 appearance-none focus:outline-none focus:ring-0 focus:border-cream-100/80 cursor-pointer"
                 value={category ?? 0}
                 onChange={(e) => {
                     const target = e.target as HTMLSelectElement;
@@ -46,10 +46,10 @@ export default function Productos() {
                 <option value={1} class="text-cream-100/80 bg-blue-dianne-950">Insumos Varios</option>
             </select>
 
-            <div class="flex items-center gap-x-20">
+            <div class="flex sm:items-center gap-x-20 sm:flex-row flex-col">
                 <div class={`flex items-center ${cuidadoInsumos}`}>
                     <span class="text-lg text-gray-50/80 mr-2 p-3"> Nivel de Cuidado : </span>
-                    <select id="underline_select" class="block p-1 my-5 text-lg text-pretty text-gray-50/80 bg-transparent border-0 border-b-2 appearance-none border-gray-50/80 focus:outline-none focus:ring-0 focus:border-gray-50/80 cursor-pointer rounded-lg"
+                    <select class="block p-1 my-5 text-lg text-pretty text-gray-50/80 bg-transparent border-0 border-b-2 appearance-none border-gray-50/80 focus:outline-none focus:ring-0 focus:border-gray-50/80 cursor-pointer rounded-lg"
                         value={nivelCuidado ?? "Todos"}
                         onChange={(e) => {
                             const target = e.target as HTMLSelectElement;
@@ -64,7 +64,7 @@ export default function Productos() {
                 </div>
                 <div class="flex items-center">
                     <span class="text-lg text-gray-50/80 mr-2 p-3"> Precio : </span>
-                    <select id="underline_select" class="block p-1 my-5 text-lg text-pretty text-gray-50/80 bg-transparent border-0 border-b-2 appearance-none border-gray-50/80 focus:outline-none focus:ring-0 focus:border-gray-50/80 cursor-pointer rounded-lg"
+                    <select class="block p-1 my-5 text-lg text-pretty text-gray-50/80 bg-transparent border-0 border-b-2 appearance-none border-gray-50/80 focus:outline-none focus:ring-0 focus:border-gray-50/80 cursor-pointer rounded-lg"
                         value={precio ?? "Todos"}
                         onChange={(e) => {
                             const target = e.target as HTMLSelectElement;
@@ -80,7 +80,7 @@ export default function Productos() {
             </div>
 
             <hr class="mb-10" />
-            <ul class="grid grid-cols-5 gap-10 justify-center items-center m-5 mb-20">
+            <ul class="grid xl:grid-cols-5 lg:grid-cols-4 sm:grid-cols-3 phone:grid-cols-2 grid-cols-1 gap-10 justify-center items-center m-5 mb-20 ">
                 {
 
                     productosInfo ?

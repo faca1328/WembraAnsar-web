@@ -7,7 +7,7 @@ interface Props{
 
 ---
 
-<div class="form__group field bg-gradient-to-t from-blue-dianne-400/50 to-transparent rounded-t-xl min-w-[30rem]">
+<div class="form__group field bg-gradient-to-t from-blue-dianne-400/50 to-transparent rounded-t-xl max-w-[30rem] w-full">
     <input class="form__field" placeholder={Astro.props.placeHolder}>
     <label for={Astro.props.for} class="form__label">{Astro.props.placeHolder}</label>
 </div>
@@ -18,7 +18,6 @@ interface Props{
   position: relative;
   padding: 20px 0 0;
   width: 100%;
-  max-width: 180px;
 }
 
 .form__field {

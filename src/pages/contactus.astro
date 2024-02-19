@@ -4,9 +4,9 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-    <div class="p-10 pb-14 flex text-cream-100 items-center bg-gradient-to-t from-blue-dianne-800/50 to-transparent to-15%">
+    <div class="p-10 pb-14 flex text-cream-100 items-center bg-gradient-to-t from-blue-dianne-800/50 to-transparent to-15% sm:flex-row flex-col  ">
         <iframe
-            class="rounded-md"
+            class="rounded-md phone:block hidden"
             width="450"
             height="300"
             style="border:0"
@@ -17,7 +17,7 @@ import Layout from "../layouts/Layout.astro";
         >
         </iframe>
 
-        <div class="ml-20 flex flex-col gap-y-10">
+        <div class="sm:ml-20 phone:mt-10 sm:mt-0 flex flex-col gap-y-10">
             <div>
                 <h1 class="text-xl">
                     Podes encontrarnos los Fines de semana y Feriados de 10 a 20hs

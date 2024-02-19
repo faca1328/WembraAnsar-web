@@ -3,7 +3,7 @@ import Input from "./input.astro";
 ---
 
 <div
-    class="flex flex-col px-10 m-auto py-24 gap-10 text-cream-100 bg-gradient-to-b from-blue-dianne-800/50 to-transparent to-15%"
+    class="flex flex-col px-10 m-auto py-24 gap-10 text-cream-100 bg-gradient-to-b from-blue-dianne-800/50 to-transparent to-15% w-full"
 >
     <div class="flex justify-between items-center">
         <h2 class="text-2xl">Escribinos tus dudas!</h2>
@@ -15,9 +15,9 @@ import Input from "./input.astro";
     </div>
     <hr class="opacity-20 -mt-5" />
 
-    <div class="flex gap-10 w-full justify-between">
-        <div class="flex flex-col gap-y-10">
-            <Input for="nombre" placeHolder="Nombre y Apellido" />
+    <div class="flex gap-10 w-full justify-between md:flex-row flex-col">
+        <div class="flex flex-col gap-y-10 w-fit">
+            <Input for="nombre" placeHolder="Nombre y Apellido"/>
 
             <Input for="email" placeHolder="Email" />
         </div>
