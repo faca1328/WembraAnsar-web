@@ -1,0 +1,26 @@
+[
+    {
+        "nombre": "regar",
+        "titulo": "Como regar tus Kokedamas",
+        "subtitulo": "cuidarlas es mucho mas facil de lo que crees",
+        "contenido": "Regar correctamente un Kokedama es muy importante. En estos días de altas temperaturas  si es necesario regar dos veces por semana. Cómo podemos saber si requiere riego??? Nuestras plantas nos avisan ",
+        "imagen": "https://www.sofiflor.com/blog/wp-content/uploads/2018/07/regar-kokedamas-1.jpg",
+        "id":"1"
+    },
+    {
+        "nombre": "plantasSalud",
+        "titulo": "+Plantas en casa = + Calidad de vida",
+        "subtitulo": "tener una casa mas 'verde' conrtibuye a nuestra salud y estado de animo",
+        "contenido": "Las plantas en casa limpian el ambiente y regulan la humedad. Las plantas expulsan dióxido de carbono por la noche, pero el resto del día aportan oxígeno fresco. Además, absorben gases contaminantes, mejoran y purifican el aire y consiguen que el ambiente tenga un poco más de humedad.",
+        "imagen": "https://www.elmueble.com/medio/2020/02/04/12-00376790-020ab4fc-1432x2000_96dece14_1432x2000.jpg",
+        "id":"2"
+    },
+    {
+        "nombre": "plantaIdeal",
+        "titulo": "Elegi la planta ideal para vos!",
+        "subtitulo": "te ayudamos a elegir la planta que mas se acople a tu casa y estilo de vida",
+        "contenido": "Las plantas son una de las formas más sencillas y efectivas de conectar con la naturaleza y agregar un toque de vida a cualquier espacio en el hogar. Además, cada tipo de planta tiene su propia personalidad y características únicas que pueden reflejar la personalidad y los intereses de quienes las cuidan.",
+        "imagen": "https://imagenes.elpais.com/resizer/-6Xsd-qIkLF6MtW9pnmsjCkpBhw=/980x980/cloudfront-eu-central-1.images.arcpublishing.com/prisa/FJPPYWTA7VEXHBRZSOCOBZ62Q4.png",
+        "id":"3"
+    }
+]

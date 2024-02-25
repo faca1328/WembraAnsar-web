@@ -1,13 +1,98 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "@/layouts/Layout.astro";
+import blog from "../data/blog-info.json";
 
+const firstBlog = blog[0];
 
+interface Blogs {
+    nombre: string;
+    titulo: string;
+    subtitulo: string;
+    contenido: string;
+    imagen: string;
+    id: string;
+}
+
+const lastBlogs = blog.slice(1);
 ---
 
-
 <Layout>
-    <div class="h-screen bg-cream-950/85">
-        blog
+    <div>
+        <article id={firstBlog.id} class="rounded lg:p-5 py-2">
+            <a
+                href="#"
+                class="flex flex-col items-cente rounded-lg bg-white border md:flex-row hover:bg-blue-dianne-50 mx-10 transition-colors duration-200"
+            >
+                <img
+                    class="object-cover md:object-contain w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+                    src={firstBlog.imagen}
+                    alt={firstBlog.nombre}
+                />
+                <div class="flex flex-col justify-between p-4 leading-normal">
+                    <h2
+                        class="mb-2 text-2xl font-bold tracking-tight text-gray-900"
+                    >
+                        {firstBlog.titulo}
+                    </h2>
+                    <h5
+                        class="mb-2 text-2xl font-bold tracking-tight text-gray-700/60"
+                    >
+                        {firstBlog.subtitulo}
+                    </h5>
+                    <p class="mb-3 font-normal text-gray-900">
+                        {firstBlog.contenido}
+                    </p>
+                </div>
+            </a>
+        </article>
+
+        <div
+            class="flex flex-row w-screen justify-center items-center my-6 text-white"
+        >
+            <hr class="w-[30%] ml-[0%]" />
+            <span class="px-5 font-extralight tracking-widest">
+                Ultimos Posteos
+            </span>
+            <hr class="w-[30%] mr-[0%]" />
+        </div>
     </div>
 
+    <div
+        class="flex mb-20 md:flex-row flex-col items-center gap-y-6 md:gap-y-0 flex-wrap justify-center"
+    >
+        {
+            lastBlogs.map((blog: Blogs) => (
+                <>
+                    <article
+                        id={blog.id}
+                        class="rounded lg:p-5 py-2 max-w-md max-h-sm"
+                    >
+                        <a
+                            class="flex flex-col items-cente rounded-lg bg-white border hover:bg-blue-dianne-50/90 mx-10 transition-colors duration-200 cursor-pointer"
+                            href={`/blog/${blog.id}`}
+                        >
+                            <img
+                                class="object-cover w-full h-64 rounded-t"
+                                src={blog.imagen}
+                                alt={blog.nombre}
+                            />
+                            <h2 class=" text-lg font-extrabold tracking-tight text-gray-900 px-2 pt-2 text-ellipsis ">
+                                {blog.titulo}
+                            </h2>
+                            <h5 class="mb-2 text-base font-normal tracking-tight text-gray-700/90 px-2 text-ellipsis overflow-hidden">
+                                {blog.subtitulo}
+                            </h5>
+                            <p class="mb-3 font-md text-gray-900 p-2 overflow-hidden text-ellipsis max-h-[6.5rem] line-clamp-4">
+                                {blog.contenido}
+                            </p>
+                            <button class="bg-blue-dianne-950/95 font-normal rounded-md">
+                                Leer Mas
+                            </button>
+                        </a>
+                    </article>
+                    
+                </>
+            ))
+        }
+    </div>
 </Layout>

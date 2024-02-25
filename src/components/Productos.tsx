@@ -23,7 +23,7 @@ export default function Productos() {
     useEffect(() => {
         async function fetchProductos() {
             const res = await fetch(`api/productos.json?category=${category}&precio=${precio}&cuidado=${nivelCuidado}`);
-            const data = await res.json();
+            const data = await res.json();            
             setProductosInfo(data)
         }
         fetchProductos()
@@ -80,7 +80,7 @@ export default function Productos() {
             </div>
 
             <hr class="mb-10" />
-            <ul class="grid xl:grid-cols-5 lg:grid-cols-4 sm:grid-cols-3 phone:grid-cols-2 grid-cols-1 gap-10 justify-center items-center m-5 mb-20 ">
+            <ul class="grid xl:grid-cols-5 lg:grid-cols-4 sm:grid-cols-3 phone:grid-cols-2 grid-cols-1 gap-10 justify-center items-center m-5 mb-36 ">
                 {
 
                     productosInfo ?
