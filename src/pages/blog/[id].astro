@@ -1,11 +1,50 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import blog from "@/data/blog-info.json"
+import blog from "@/data/blog-info.json";
+import ContenidoBlog from "@/components/ContenidoBlog.tsx";
 
+const { id } = Astro.params;
+
+const bloglist = blog.find((bloglist) => bloglist.id === id);
+
+const blogContent = bloglist?.HTMLContenido ?? "Perdon, Algo salio mal.";
 ---
 
 <Layout>
-    
-    <div class="h-screen bg-cream-800"> hola</div>
+    <div
+        class="p-5 sm:p-10 w-full transition-all flex gap-5 blog-bg justify-center items-center md:items-start md:justify-start flex-col md:flex-row pb-24 md:pb-40 lg:pb-24"
+    >
+        <picture class="sm:min-w-[384px]">
+            <img
+                src={bloglist?.imagen}
+                alt="img"
+                class="sm:size-96 size-80 transition-all rounded"
+            />
+        </picture>
 
+        <div class="ml-5">
+            <h1
+                class="text-3xl py-6 font-bold tracking-wider text-cream-100/95 flex flex-col"
+            >
+                {bloglist?.titulo}
+                <button class="bg-black/60 text-xs font-normal rounded-md px-3 py-1 w-20 text-white mt-1">
+                    Categoria
+                </button>
+            </h1>
+
+            <ContenidoBlog client:load cont={blogContent} />
+        </div>
+    </div>
 </Layout>
+
+<style>
+    .blog-bg {
+        background: linear-gradient(
+            183deg,
+            rgba(0, 30, 38, 1) 10%,
+            rgb(52, 80, 83) 60%,
+            rgba(96, 128, 132, 1) 90%,
+            rgb(101, 138, 136) 100%
+        );
+    }
+</style>

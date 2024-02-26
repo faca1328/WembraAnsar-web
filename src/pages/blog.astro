@@ -20,11 +20,16 @@ const lastBlogs = blog.slice(1);
     <div>
         <article id={firstBlog.id} class="rounded lg:p-5 py-2">
             <a
-                href="#"
-                class="flex flex-col items-cente rounded-lg bg-white border md:flex-row hover:bg-blue-dianne-50 mx-10 transition-colors duration-200"
+                href={`/blog/${firstBlog.id}`}
+                class="flex flex-col items-cente rounded-lg bg-white border md:flex-row hover:bg-blue-dianne-50 mx-10 transition-colors duration-200 relative"
             >
+                <button
+                    class="bg-black/90 font-light text-sm rounded-md absolute px-3 py-1"
+                >
+                    Categoria
+                </button>
                 <img
-                    class="object-cover md:object-contain w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+                    class="object-fill md:object-contain w-full rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
                     src={firstBlog.imagen}
                     alt={firstBlog.nombre}
                 />
@@ -68,9 +73,12 @@ const lastBlogs = blog.slice(1);
                         class="rounded lg:p-5 py-2 max-w-md max-h-sm"
                     >
                         <a
-                            class="flex flex-col items-cente rounded-lg bg-white border hover:bg-blue-dianne-50/90 mx-10 transition-colors duration-200 cursor-pointer"
+                            class="flex flex-col items-cente rounded-lg bg-white border hover:bg-blue-dianne-50/90 mx-10 transition-colors duration-200 cursor-pointer relative"
                             href={`/blog/${blog.id}`}
                         >
+                            <button class="bg-black/90 font-light text-sm rounded-md absolute px-3 py-1">
+                                Categoria
+                            </button>
                             <img
                                 class="object-cover w-full h-64 rounded-t"
                                 src={blog.imagen}
@@ -90,7 +98,6 @@ const lastBlogs = blog.slice(1);
                             </button>
                         </a>
                     </article>
-                    
                 </>
             ))
         }
