@@ -1,50 +1,65 @@
 ---
 // Supports weights 100-900
-import '@fontsource-variable/onest';
-import Header from '../components/header.astro';
-import Footer from '../components/footer.astro';
-import { ViewTransitions } from 'astro:transitions';
+import "@fontsource-variable/onest";
+import Header from "../components/header.astro";
+import Footer from "../components/footer.astro";
+import { ViewTransitions } from "astro:transitions";
+import "toastify-js/src/toastify.css"
+
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Bienvenidos a Wembra-Ansar, un lugar que te invita a regalar Vida! Aqui podras comprar y aprender sobre tus plantas favoritas." />
+		<meta
+			name="description"
+			content="Bienvenidos a Wembra-Ansar, un lugar que te invita a regalar Vida! Aqui podras comprar y aprender sobre tus plantas favoritas."
+		/>
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="" />
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 		<title>Wenbra-Ansar</title>
-		<ViewTransitions/>
+		<ViewTransitions />
 	</head>
 	<body>
 		<Header/>
 		<slot />
-		<Footer/>
+		<Footer />
+		<script
+			is:inline
+			src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"
+		></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 	</body>
-	<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
+
+
+	<style is:global>
+		code {
+			font-family:
+				Menlo,
+				Monaco,
+				Lucida Console,
+				Liberation Mono,
+				DejaVu Sans Mono,
+				Bitstream Vera Sans Mono,
+				Courier New,
+				monospace;
+		}
+		html {
+			background: rgb(0, 30, 38);
+			background: linear-gradient(
+				2deg,
+				rgba(0, 30, 38, 1) 93%,
+				rgb(52, 80, 83) 100%,
+				rgba(96, 128, 132, 1) 100%,
+				rgb(101, 138, 136) 100%
+			);
+			color: #fefde8;
+			font-weight: 500;
+			font-family: "Onest Variable", sans-serif;
+			scroll-behavior: smooth;
+			overflow-x: hidden;
+		}
+	</style>
 </html>
-
-<style is:global>
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-			
-	}
-	html{
-		background: rgb(0,30,38);
-background: linear-gradient(2deg, rgba(0,30,38,1) 93%, rgb(52, 80, 83) 100%, rgba(96,128,132,1) 100%, rgb(101, 138, 136) 100%);
-		color: #fefde8;
-		font-weight: 500;
-		font-family: 'Onest Variable', sans-serif;
-		scroll-behavior: smooth;
-		overflow-x: hidden;
-	}
-
-</style>
