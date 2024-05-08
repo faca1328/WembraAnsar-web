@@ -1,8 +1,9 @@
 import { products, removeProducts } from "@/context/shopProducts"
 import { useStore } from "@nanostores/preact"
+import { ModalShopForm } from "./ModalShopForm";
 
 
-interface Productos {
+export interface Productos {
     nombre: string,
     descripcion: string,
     cuidado: string,
@@ -82,37 +83,46 @@ export default function ModalShop() {
                         <h3 className="text-xl font-semibold text-gray-900">Seleccionados</h3>
                     </div>
 
-                    <div
-                        class={`p-4 md:p-5 flex flex-col gap-y-2 overflow-x-hidden max-h-[76%] 
+                    {$products.length === 0 ?
+                        (
+                            <div class="m-auto w-full h-full text-center pt-5">
+                                <h4 class="text-gray-500/80 m-auto w-full h-full " >
+                                    Agregue un producto para consultar stock !
+                                </h4>
+                            </div>
+                        )
+                        :
+                        (
+                            <div
+                                class={`p-4 md:p-5 flex flex-col gap-y-2 overflow-x-hidden max-h-[76%] 
                     ${$products.length >= 1 ? "overflow-y-scroll" : "overflow-y-hidden"}`}>
 
-                        {$products.map((producto) => (
-                            <div class="border-2 border-blue-dianne-400 flex flex-row w-full rounded-full bg-blue-dianne-50 text-black h-20 items-center justify-around">
-                                <img class="size-16 object-cover rounded-full -ml-1 xl:-ml-3" src={producto.imagen} alt="img" />
-                                <div class="w-16">
-                                    <h1>{producto.nombre}</h1>
-                                </div>
+                                {$products.map((producto) => (
+                                    <div class="border-2 border-blue-dianne-400 flex flex-row w-full rounded-full bg-blue-dianne-50 text-black h-20 items-center justify-around">
+                                        <img class="size-16 object-cover rounded-full -ml-1 xl:-ml-3" src={producto.imagen} alt="img" />
+                                        <div class="w-16">
+                                            <h1>{producto.nombre}</h1>
+                                        </div>
 
-                                <h4>Precio: ${producto.precio}</h4>
+                                        <h4>Precio: ${producto.precio}</h4>
 
-                                <button
-                                    onClick={() => removeProducts(producto.id)}
-                                    class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-2 justify-center items-center mr-2">
-                                    <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
-                                    </svg>
-                                </button>
+                                        <button
+                                            onClick={() => removeProducts(producto.id)}
+                                            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-2 justify-center items-center mr-2">
+                                            <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                ))}
+
+
                             </div>
-                        ))}
-
-
-                    </div>
+                        )
+                    }
 
                     <div class="items-center p-4 md:mt-5 pb-3 border-t border-gray-200 rounded-b fixed max-h-11 bottom-20 sm:bottom-14 gap-y-1 lg:bottom-4 flex flex-col lg:flex-row lg:justify-between w-[30%] xl:w-[25%]">
-                        <button
-                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center w-fit">
-                            Consultar Stock
-                        </button>
+                        <ModalShopForm productos={$products.length} />
 
                         <h1 class="text-black">Total: ${precioTotal}</h1>
 
