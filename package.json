@@ -17,6 +17,7 @@
     "@fontsource-variable/onest": "^5.0.2",
     "@nanostores/preact": "^0.5.1",
     "astro": "^4.2.8",
+    "dotenv": "^16.4.5",
     "flowbite": "^2.2.1",
     "nanostores": "^0.10.0",
     "preact": "^10.19.3",
