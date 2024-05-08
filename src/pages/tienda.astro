@@ -4,8 +4,23 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-    <div class="bg-[blur-lg] text-center items-center w-full my-10">
-        Bienvenidos a la tienda !
+    <div class="bg-[blur-lg] text-center items-center w-[95%] my-10 mx-10">
+        <h1 class="text-4xl mb-8">Bienvenidos a la tienda !</h1>
+
+        <p class="font-normal text-justify">
+            <span class="bg-red-900 font-medium text-lg">Importante!</span>
+            <br />
+            Los precios son actualizados mensualmente, aun asi, pueden estar
+            desactualizados. Recordar que el Catalogo cumple unicamente una
+            funcion informativa, es decir, que no se realizan compras a traves
+            de la web, sino que se selecionan los productos para poder consultar
+            su precio y stock.
+            <br />
+            A medida que seleccionan los productos veran que aparecen en su 'bolsa'
+            arriba a la derecha. Una vez conforme con lo seleccionado puede ir a
+            su 'bolsa' y luego seleccionar 'consultar stock'.
+            Nosotros recibiremos un mail con su cosnulta y responderemos a la brevedad!
+        </p>
     </div>
     <Productos client:load />
 </Layout>
