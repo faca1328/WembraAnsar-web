@@ -2,12 +2,16 @@
 import Input from "./input.astro";
 ---
 
-<div
+<form
+    action="https://formsubmit.co/91ff87d248970b0be03e3067b213271c"
+    method="POST"
     class="flex flex-col px-10 m-auto py-24 gap-10 text-cream-100 bg-gradient-to-b from-blue-dianne-800/50 to-transparent to-15% w-full"
 >
     <div class="flex justify-between items-center">
         <h2 class="text-2xl">Escribinos tus dudas!</h2>
         <button
+            id="submit-btn"
+            type="submit"
             class="mr-10 bg-gradient-to-br from-blue-dianne-400/50 to-blue-dianne-800/50 p-3 rounded-3xl transition-all duration-300 hover:shadow-cream-50 hover:shadow-sm"
         >
             Enviar
@@ -17,9 +21,14 @@ import Input from "./input.astro";
 
     <div class="flex gap-10 w-full justify-between md:flex-row flex-col">
         <div class="flex flex-col gap-y-10 w-[inherit]">
-            <Input for="nombre" placeHolder="Nombre y Apellido"/>
+            <Input
+                for="nombre"
+                name="nombre"
+                placeHolder="Nombre y Apellido"
+                type="text"
+            />
 
-            <Input for="email" placeHolder="Email" />
+            <Input for="email" name="email" placeHolder="Email" type="email" />
         </div>
         <div
             class="form__group field bg-gradient-to-t from-blue-dianne-400/50 to-transparent rounded-t-xl w-full max-w-[30rem]"
@@ -32,13 +41,41 @@ import Input from "./input.astro";
             <label for="textarea" class="form__label">Escribinos!</label>
         </div>
     </div>
-</div>
+
+    <input type="hidden" name="_next" value="/contactus">
+    <input type="hidden" name="_captcha" value="false" />
+</form>
+
+<script is:inline>
+    const btn = document.getElementById("submit-btn");
+
+    btn.forEach(button => {
+        button.addEventListener(onsubmit, () =>
+        Toastify({
+            text: "Gracias por tu consulta!",
+            duration: 3000,
+            newWindow: true,
+            close: true,
+            gravity: "top",
+            position: "right",
+            stopOnFocus: true,
+            style: {
+                background: "linear-gradient(to right, #e61e1e, #ff6e6e)",
+            },
+        }).showToast());
+    })
+    
+    
+    
+</script>
 
 <style>
-    textarea:focus{
+    textarea:focus {
         border-color: rgba(255, 145, 0, 0);
-    box-shadow: 0 1px 1px rgba(229, 103, 23, 0)inset, 0 0 8px rgba(255,144,0,0);
-    outline: 0 none;
+        box-shadow:
+            0 1px 1px rgba(229, 103, 23, 0) inset,
+            0 0 8px rgba(255, 144, 0, 0);
+        outline: 0 none;
     }
 
     .form__group {
@@ -53,7 +90,7 @@ import Input from "./input.astro";
         outline: 0;
         font-size: 17px;
         color: #fff;
-        padding: 40px 0;
+        padding: 50px 0;
         background: transparent;
         transition: border-color 0.2s;
     }
@@ -79,7 +116,7 @@ import Input from "./input.astro";
     }
 
     .form__field:focus {
-        padding-bottom: 6px;
+        padding-bottom: 50px;
         font-weight: 700;
         border-width: 2px;
         border-image: linear-gradient(to right, #315359, #439497);

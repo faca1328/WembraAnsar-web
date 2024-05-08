@@ -112,7 +112,7 @@ export default function Productos() {
                                             <li key={producto.id}
                                                 class="max-w-sm bg-white border border-gray-200 rounded-lg hover:scale-[1.02] transition-all duration-300 cursor-pointer animate-fade-left animate-ease-out"
                                             >
-                                                <img src={producto.imagen} alt={producto.nombre} class="object-cover h-[10rem] w-full" />
+                                                <img src={producto.imagen} alt={producto.nombre} class="object-cover h-[10rem] w-full rounded-t-lg" />
                                                 <div class="p-5">
                                                     <h5
                                                         class="mb-2 text-2xl font-bold tracking-tight text-gray-900"
@@ -175,7 +175,9 @@ export default function Productos() {
                                                             class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
                                                                 Agregar Producto
                                                             </button>
-                                                            <button class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100">Decline</button>
+                                                            <button class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100"
+                                                            onClick={() => closeModalBtn(`${producto.id}-modal`)}
+                                                            >Cerrar</button>
                                                         </div>
                                                     </div>
                                                 </div>

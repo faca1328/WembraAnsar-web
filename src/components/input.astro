@@ -3,12 +3,15 @@
 interface Props{
     for: string;
     placeHolder: string;
+    name: string;
+    type: "email" | "text";
 }
+
 
 ---
 
 <div class="form__group field bg-gradient-to-t from-blue-dianne-400/50 to-transparent rounded-t-xl max-w-[30rem] w-full">
-    <input class="form__field" placeholder={Astro.props.placeHolder}>
+    <input class="form__field" placeholder={Astro.props.placeHolder} name={Astro.props.name} type={Astro.props.type} required>
     <label for={Astro.props.for} class="form__label">{Astro.props.placeHolder}</label>
 </div>
 

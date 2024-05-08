@@ -79,7 +79,7 @@ export default function ModalShop() {
                             </svg>
                         </button>
 
-                        <h3 className="text-xl font-semibold text-gray-900">Hola</h3>
+                        <h3 className="text-xl font-semibold text-gray-900">Seleccionados</h3>
                     </div>
 
                     <div
