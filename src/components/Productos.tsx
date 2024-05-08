@@ -110,17 +110,17 @@ export default function Productos() {
                                     return (
                                         <div>
                                             <li key={producto.id}
-                                                class="max-w-sm bg-white border border-gray-200 rounded-lg hover:scale-[1.02] transition-all duration-300 cursor-pointer animate-fade-left animate-ease-out"
+                                                class="max-w-sm min-h-96 bg-white border border-gray-200 rounded-lg hover:scale-[1.02] transition-all duration-300 cursor-pointer animate-fade-left animate-ease-out"
                                             >
                                                 <img src={producto.imagen} alt={producto.nombre} class="object-cover h-[10rem] w-full rounded-t-lg" />
-                                                <div class="p-5">
+                                                <div class="p-5 h-full justify-between">
                                                     <h5
                                                         class="mb-2 text-2xl font-bold tracking-tight text-gray-900"
                                                     >
                                                         {producto.nombre}
                                                     </h5>
 
-                                                    <p class="mb-3 font-normal text-gray-700 ">
+                                                    <p class="mb-3 font-normal text-gray-700 min-h-12">
                                                         {producto.descripcion}
                                                     </p>
                                                     <p class="mb-5 font-normal text-gray-700 ">

@@ -19,12 +19,60 @@
                 "id":2
             },
             {
+                "nombre": "Aloe Vera",
+                "descripcion": "Descripcion ...",
+                "cuidado": "Facil",
+                "imagen": "https://infoagro.com.ar/wp-content/uploads/2021/07/aloe-vera-en-maceta.jpg",
+                "precio": 3000,
+                "id":3
+            },
+            {
                 "nombre": "Palo de Agua",
                 "descripcion": "Descripcion de un palo de agua ...",
                 "cuidado": "Medio",
                 "imagen": "https://madreelefante.com/wp-content/uploads/2022/07/9D15E774-6F97-463A-9AB6-9CE02DA566F3.jpeg",
                 "precio": 1000,
-                "id":3
+                "id":4
+            },
+            {
+                "nombre": "Asplenium",
+                "descripcion": "Descripcion ...",
+                "cuidado": "Facil",
+                "imagen": "https://media.istockphoto.com/id/1306209062/es/foto/asplenium-antiquum-es-un-helecho-del-grupo-conocido-como-helechos-nido-de-aves.jpg?s=612x612&w=0&k=20&c=KbT3_N0u15Kd3rqKBUk44dhrNcbuXf-iNCxWo8qcMh4=",
+                "precio": 10000,
+                "id":5
+            },
+            {
+                "nombre": "Cala",
+                "descripcion": "Descripcion ...",
+                "cuidado": "Dificil",
+                "imagen": "https://dcdn.mitiendanube.com/stores/002/094/351/products/spaty-maceta-premium1-00b8863f3f41cff1a816799252931903-640-0.jpg",
+                "precio": 19000,
+                "id":6
+            },
+            {
+                "nombre": "Chamaedorea",
+                "descripcion": "Descripcion ...",
+                "cuidado": "Medio",
+                "imagen": "https://pcfb.gumlet.io/images/articles/parlor-palm-in-indirect-light.png?w=640&h=426&mode=crop&crop=smart&s=e1883dcbefa56b82117629c1eceae489",
+                "precio": 10000,
+                "id":7
+            },
+            {
+                "nombre": "Ciclamen",
+                "descripcion": "Descripcion ...",
+                "cuidado": "Medio",
+                "imagen": "https://www.infoesquelas.com/imgs/tienda_articulosblog/tienda_articulos_blog_ciclamen_ciclamen_consejos-ciclamen-perfecto_4547_1507967863.jpg",
+                "precio": 5000,
+                "id":8
+            },
+            {
+                "nombre": "Euonimo",
+                "descripcion": "Descripcion ...",
+                "cuidado": "Medio",
+                "imagen": "https://media.cdn.bauhaus/m/196919-1/12.jpg",
+                "precio": 20000,
+                "id":9
             }
         ]
     },
