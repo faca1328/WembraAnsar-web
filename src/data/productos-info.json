@@ -85,7 +85,7 @@
                 "cuidado": "",
                 "imagen": "https://acdn.mitiendanube.com/stores/913/526/products/711-cf8208230b0d7d493c15490344743017-640-0.png",
                 "precio": 25.50,
-                "id":4
+                "id":1001
             },
             {
                 "nombre": "Maceta Grande",
@@ -93,7 +93,7 @@
                 "cuidado": "",
                 "imagen": "https://acdn.mitiendanube.com/stores/913/526/products/diseno-sin-titulo-2019-06-10t105638-2751-c07b19fe9f18d6909715609503232479-640-0.png",
                 "precio": 50,
-                "id":5
+                "id":1002
             }
         ]
     }

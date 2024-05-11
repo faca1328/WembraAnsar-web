@@ -10,7 +10,7 @@ export function addProducts(product) {
             duration: 3000,
             newWindow: true,
             close: true,
-            gravity: "top",
+            gravity: "bottom",
             position: "right",
             stopOnFocus: true,
             style: {
@@ -27,7 +27,7 @@ export function addProducts(product) {
             duration: 3000,
             newWindow: true,
             close: true,
-            gravity: "top",
+            gravity: "bottom",
             position: "right",
             stopOnFocus: true,
             style: {

@@ -99,7 +99,7 @@ export default function ModalShop() {
 
                                 {$products.map((producto) => (
                                     <div class="border-2 border-blue-dianne-400 flex flex-row w-full rounded-full bg-blue-dianne-50 text-black h-20 items-center justify-around">
-                                        <img class="size-16 object-cover rounded-full -ml-1 xl:-ml-3" src={producto.imagen} alt="img" />
+                                        <img class={`${$products.length >= 6 ? "size-10" : "size-16"} object-cover rounded-full -ml-1 xl:-ml-3`} src={producto.imagen} alt="img" />
                                         <div class="w-16">
                                             <h1>{producto.nombre}</h1>
                                         </div>
