@@ -122,7 +122,7 @@ export default function ModalShop() {
                     }
 
                     <div class="items-center p-4 md:mt-5 pb-3 border-t border-gray-200 rounded-b fixed max-h-11 bottom-20 sm:bottom-14 gap-y-1 lg:bottom-4 flex flex-col lg:flex-row lg:justify-between w-[30%] xl:w-[25%]">
-                        <ModalShopForm productos={$products.length} />
+                        <ModalShopForm />
 
                         <h1 class="text-black">Total: ${precioTotal}</h1>
 
