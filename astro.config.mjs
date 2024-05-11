@@ -4,7 +4,6 @@ import preact from "@astrojs/preact";
 import tailwind from "@astrojs/tailwind";
 import mdx from "@astrojs/mdx";
 
-// https://astro.build/config
 export default defineConfig({
   output: "server",
   adapter: cloudflare(),
@@ -13,10 +12,9 @@ export default defineConfig({
     service: 'noop'
   },
 
-  // Desactivar SSR para todas las páginas
-  pages: {
-    '**/*': {
-      ssr: false
-    }
-  }
+  // Excluir dotenv del proceso de empaquetado
+  exclude: [
+    'dotenv'
+  ]
 });
+
