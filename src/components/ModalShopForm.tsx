@@ -4,8 +4,10 @@ import { useStore } from "@nanostores/preact";
 import type { Productos } from "./ModalShop";
 
 
-export const ModalShopForm = () => {
 
+export const ModalShopForm = () => {
+    const FORM_ACTION = import.meta.env.PUBLIC_FORM_ACTION;
+ 
     const $products: Productos[] = useStore(products);
     const [formData, setFormData] = useState({
         name: "",
@@ -100,7 +102,7 @@ export const ModalShopForm = () => {
                     <form
                         id="form"
                         class="w-[90%] m-5 flex flex-col"
-                        action="https://formspree.io/f/xyyrvelw"
+                        action={`${FORM_ACTION}`}
                         method="POST"
                         onSubmit={handleSubmit}
                     >
