@@ -3,12 +3,14 @@ import cloudflare from '@astrojs/cloudflare';
 import preact from "@astrojs/preact";
 import tailwind from "@astrojs/tailwind";
 import mdx from "@astrojs/mdx";
+import node from '@astrojs/node';
 
 
-// https://astro.build/config
 export default defineConfig({
-  site: 'https://example.com',
   output: "server",
   adapter: cloudflare(),
-  integrations: [preact(), tailwind(), mdx()]
+  integrations: [preact(), tailwind(), mdx()],
+  adapter: node({
+    mode: 'standalone',
+  })
 });
