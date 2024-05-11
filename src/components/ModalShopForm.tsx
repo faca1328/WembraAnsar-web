@@ -3,7 +3,9 @@ import { products } from "@/context/shopProducts";
 import { useStore } from "@nanostores/preact";
 import type { Productos } from "./ModalShop";
 
+
 export const ModalShopForm = () => {
+
     const $products: Productos[] = useStore(products);
     const [formData, setFormData] = useState({
         name: "",
@@ -60,6 +62,8 @@ export const ModalShopForm = () => {
             <button
                 class="text-white bg-daintree-900/95 hover:brightness-110 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center w-fit"
                 onClick={openShopModal}
+                disabled={$products.length === 0}
+
             >
                 Consultar Stock
             </button>
@@ -96,7 +100,7 @@ export const ModalShopForm = () => {
                     <form
                         id="form"
                         class="w-[90%] m-5 flex flex-col"
-                        action={`${process.env.FORM_ACTION}`}
+                        action="https://formspree.io/f/xyyrvelw"
                         method="POST"
                         onSubmit={handleSubmit}
                     >

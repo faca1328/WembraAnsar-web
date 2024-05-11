@@ -16,7 +16,7 @@ export interface Productos {
 export default function ModalShop() {
 
     const $products: Productos[] = useStore(products)
-
+    
 
     const precioTotal = $products.reduce((total, producto) => {
         return total + producto.precio;
