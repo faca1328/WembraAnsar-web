@@ -6,8 +6,6 @@ import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://faca1328.github.io',
-  base: 'WembraAnsar-web',
   output: "server",
   integrations: [preact(), tailwind(), mdx()]
 });
