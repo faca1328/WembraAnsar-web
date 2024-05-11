@@ -96,7 +96,7 @@ export const ModalShopForm = () => {
                     <form
                         id="form"
                         class="w-[90%] m-5 flex flex-col"
-                        action="https://formspree.io/f/xyyrvelw"
+                        action={`${process.env.FORM_ACTION}`}
                         method="POST"
                         onSubmit={handleSubmit}
                     >
