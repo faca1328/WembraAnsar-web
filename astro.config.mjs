@@ -11,5 +11,12 @@ export default defineConfig({
   integrations: [preact(), tailwind(), mdx()],
   images: {
     service: 'noop'
+  },
+
+  // Desactivar SSR para todas las páginas
+  pages: {
+    '**/*': {
+      ssr: false
+    }
   }
 });
