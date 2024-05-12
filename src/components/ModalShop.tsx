@@ -2,8 +2,6 @@ import { products, removeProducts } from "@/context/shopProducts"
 import { useStore } from "@nanostores/preact"
 import { ModalShopForm } from "./ModalShopForm";
 
-
-
 export interface Productos {
     nombre: string,
     descripcion: string,
@@ -12,7 +10,6 @@ export interface Productos {
     precio: number,
     id: number
 }
-
 
 export default function ModalShop() {
 
