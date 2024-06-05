@@ -33,7 +33,7 @@ export default function ModalShop() {
 
     return (
         <>
-            <button className="cursor-pointer text-cream-200/90 relative" onClick={openShopModal}>
+            <button className="cursor-pointer text-black relative" onClick={openShopModal}>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="rgba(191,226,225,0.1)"
